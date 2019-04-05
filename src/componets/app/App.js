@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
+import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
       <div className="App">
-        hello
+         {this.showContentMenus(RouterURL)}
       </div>
     );
+  }
+  showContentMenus = (routes)=>{ 
+    var result = null;
+    if(routes.length>0)
+    {
+        result =routes.map((route,index)=>{
+           return(<Route
+                key={index}
+                path={route.path}
+                exact ={route.exact}
+                component={route.main}
+            />);
+        });
+    }
+    return<Switch>{result}</Switch>
   }
 }
 
