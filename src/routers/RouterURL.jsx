@@ -1,10 +1,22 @@
 import React from 'react';
-import Home from './../componets/pages/home/home';
+import Dashboards       from '../Componets/Pages/Dashboards/Dashboards';
+import Buildings        from '../Componets/Pages/Buildings/Buildings';
+import Rooms            from '../Componets/Pages/Rooms/Rooms';
 const RouterURL=[
         {
             path:'/',
             exact:true,
-            main:()=><Home/>
+            main:()=><Dashboards/>
+        },
+        {
+            path:'/buildings',
+            exact:true,
+            main:()=><Buildings/>
+        },
+        {
+            path:'/rooms',
+            exact:true,
+            main:()=><Rooms/>
         }
 ];
 export default RouterURL;
