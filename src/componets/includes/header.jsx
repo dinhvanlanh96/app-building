@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+
 import { Link } from "react-router-dom";
 class Header extends Component{
     render(){
         return(
+            
             <div id="navbar" className="navbar navbar-default ace-save-state navbar-fixed-top">
                  <div className="navbar-container ace-save-state" id="navbar-container">
                 <button type="button" className="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
@@ -186,14 +188,14 @@ class Header extends Component{
                     </a>
                     <ul className="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                        <a  href="#">
+                        <Link  to="/profiles">
                             <i className="ace-icon fa fa-user" />
                             Hô sơ của bạn
-                        </a>
+                        </Link>
                         </li>
                         <li className="divider" />
                         <li>
-                        <a id="id-btn-dialog2" href="#">
+                        <a id="id-btn-dialog2" href="/profiles">
                             <i className="ace-icon fa fa-power-off" />
                             Đăng xuất
                         </a>

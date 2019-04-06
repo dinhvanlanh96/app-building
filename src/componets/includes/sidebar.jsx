@@ -271,7 +271,7 @@ class Header extends Component{
                 <b className="arrow" />
                 <ul className="submenu">
                   <li className= "">
-                    <Link  to="#">
+                    <Link  to="/profiles">
                       <i className="menu-icon fa fa-caret-right" />
                       Hô sơ cá nhân
                    </Link>
